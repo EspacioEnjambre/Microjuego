@@ -4,22 +4,36 @@
 <head>
   <meta charset="utf-8">
   <title>El Archivo de los Textos Perdidos</title>
-  <script src="https://cdn.jsdelivr.net/gh/tmedwards/sugarcube-2/dist/format.js"></script>
+  <script>
+  window.storyFormat = {
+    "name": "SugarCube",
+    "version": "2.34.1",
+    "author": "Thomas Michael Edwards",
+    "description": "A free (gratis and libre) story format for Twine/Twee.",
+    "license": "ISC",
+    "proofing": false,
+    "source": null,
+    "setup": null,
+    "config": null,
+    "modules": [],
+    "output": "function(){}"
+  };
+  </script>
 </head>
 <body>
   <tw-storydata name="El Archivo de los Textos Perdidos" startnode="1" creator="Twine" creator-version="2.3.9" ifid="F44D56F1-7C04-4A6E-B6DF-BC78DB1222D5" zoom="1" format="SugarCube" options="" hidden>
     <style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
-    body {{
+    body {
         background-color: #111;
         color: #f2f2f2;
         font-family: 'Georgia', serif;
         background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0c/Black_background.png');
         background-size: cover;
-    }}
+    }
     </style>
     <tw-passagedata pid="1" name="Inicio" tags="" position="100,100" size="100,100">Una puerta sin pomo.  
 Una voz sin cuerpo.  
-&quot;Esto no es un juego. Es una búsqueda.&quot;
+"Esto no es un juego. Es una búsqueda."
 
 [[Entrar|Hall de los Rumores]]</tw-passagedata>
 
@@ -41,9 +55,9 @@ Como si el tiempo se tragara lo que escribís.
 
 Type something:
 
-&lt;input type=&quot;text&quot; id=&quot;inputTexto&quot;&gt;  
-&lt;button onclick=&quot;document.getElementById('resultado').innerHTML = 'Ya está desapareciendo. Pero algo queda.';&quot;&gt;Enviar&lt;/button&gt;  
-&lt;div id=&quot;resultado&quot;&gt;&lt;/div&gt;
+<input type="text" id="inputTexto">  
+<button onclick="document.getElementById('resultado').innerHTML = 'Ya está desapareciendo. Pero algo queda.';">Enviar</button>  
+<div id="resultado"></div>
 
 [[Seguir|Habitación del Otro]]</tw-passagedata>
 
@@ -68,5 +82,8 @@ Y eso, a veces, es suficiente.
 
 [[Volver distinto|https://tuapp.com/ejercicio]]</tw-passagedata>
   </tw-storydata>
+  <script>
+    document.querySelector("tw-storydata").removeAttribute("hidden");
+  </script>
 </body>
 </html>
